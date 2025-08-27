@@ -8,13 +8,17 @@ from datetime import datetime
 from pathlib import Path
 from collections import defaultdict
 import pythoncom
-
+import webbrowser
+import threading
 # Detectar sistema operativo
 ON_WINDOWS = platform.system() == "Windows"
 if ON_WINDOWS:
     from docx2pdf import convert  # solo en Windows
 
 app = Flask(__name__)
+
+def open_browser():
+    webbrowser.open_new("http://127.0.0.1:5000/")
 
 def get_downloads_folder():
     home = Path.home()
@@ -107,5 +111,11 @@ def procesar():
 
     return render_template("success.html", ruta=output_dir, certificados=certificados_por_compania)
 
+
+def open_browser():
+    webbrowser.open_new("http://127.0.0.1:5000/")
+
+
 if __name__ == "__main__":
-    app.run(debug=True)
+    threading.Timer(1.5, open_browser).start()
+    app.run(debug=False)
