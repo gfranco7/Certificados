@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Error - No hay certificados</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+    }
+    main {
+      min-height: 100vh;
+      font-family: 'Playfair Display', serif;
+      background: linear-gradient(135deg, rgb(110, 0, 0) 20%, black 60%);
+      padding: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 0px 40px rgb(255, 100, 100);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      animation: fadeIn 1s ease-in-out;
+      color: white;
+      text-align: center;
+    }
+    header {
+      text-align: center; 
+      margin-bottom: 20px;
+    }
+
+    .logo {
+      max-width: 120px; 
+      height: auto;
+      opacity: 0.9; 
+    }
+    h1, h2, h3, label, p, a, button, input{
+      font-family: 'Poppins', sans-serif;
+      }
+  
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #ffcccc;
+    }
+    p {
+      font-size: 1.2rem;
+    }
+    a {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 10px 20px;
+      text-decoration: none;
+      border: 2px solid white;
+      border-radius: 10px;
+      color: white;
+      transition: 0.3s;
+    }
+    a:hover {
+      background: #ffffff;
+      color: black;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="container">
+      <header><img src="{{ url_for('static', filename='campuslands.png') }}" alt="Logo Empresa" class="logo">
+      </header>
+      <h2>⚠️ No hay certificados por generar</h2>
+      <a href="/">Volver</a>
+    </div>
+  </main>
+</body>
+</html>

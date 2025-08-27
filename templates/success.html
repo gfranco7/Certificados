@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certificados Generados</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+    }
+    main {
+      min-height: 100vh;
+      font-family: 'Playfair Display', serif;
+      background: linear-gradient(135deg, rgb(0, 110, 73) 20%, black 60%);
+      padding: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .container {
+      max-width: 800px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 0px 40px rgb(255, 255, 255);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(20px);
+      animation: fadeIn 1s ease-in-out;
+      color: white;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .logo {
+      max-width: 120px; 
+      height: auto;
+      opacity: 0.9; 
+    }
+    h1, h2, h3, label, p, a, button, input{
+      font-family: 'Poppins', sans-serif;
+      }
+    h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .compania {
+      margin-top: 1.5rem;
+    }
+    .compania h3 {
+      margin-bottom: 0.5rem;
+      color: #00ffff;
+    }
+    ul {
+      list-style: none;
+      padding-left: 1rem;
+    }
+    li {
+      margin: 4px 0;
+    }
+    pre {
+      background: rgba(0,0,0,0.3);
+      padding: 1rem;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+    a {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 10px 20px;
+      text-decoration: none;
+      border: 2px solid white;
+      border-radius: 10px;
+      color: white;
+      transition: 0.3s;
+    }
+    a:hover {
+      background: #ffffff;
+      color: black;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="container">
+      <header><img src="{{ url_for('static', filename='campuslands.png') }}" alt="Logo Empresa" class="logo">
+      </header>
+      <h2>✅ Certificados generados exitosamente</h2>
+      <p>Los archivos se encuentran en:</p>
+      <pre>{{ ruta }}</pre>
+      <a href="/">Volver</a>
+    </div>
+  </main>
+</body>
+</html>
