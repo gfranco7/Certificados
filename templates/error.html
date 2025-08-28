@@ -3,84 +3,202 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Error - No hay certificados</title>
+  <title>Error - Sin Certificados por Generar</title>
+  <!-- Fuente elegante -->
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
   <style>
+    :root {
+      --azul: #1e3a8a;     
+      --azul-claro: #3b82f6;
+      --naranja: #e4660d;  
+      --gris: #f3f4f6;
+      --gris-texto: #585858;
+    }
+
     body {
       margin: 0;
     }
+
     main {
       min-height: 100vh;
       font-family: 'Playfair Display', serif;
-      background: linear-gradient(135deg, rgb(110, 0, 0) 20%, black 60%);
+      background: linear-gradient(135deg, rgb(124, 1, 1) 20%, black 60%);
       padding: 2rem;
       display: flex;
       align-items: center;
       justify-content: center;
     }
-    .container {
-      max-width: 700px;
-      margin: auto;
-      background: rgba(255, 255, 255, 0.15);
+
+   .container {
+      max-width: 800px;
+      background: rgba(255, 255, 255, 0.2);
       border-radius: 16px;
       padding: 2rem;
-      box-shadow: 0 0px 40px rgb(255, 100, 100);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 0px 40px rgb(255, 255, 255);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(20px);
       animation: fadeIn 1s ease-in-out;
       color: white;
-      text-align: center;
     }
+
     header {
-      text-align: center; 
+      text-align: center;
       margin-bottom: 20px;
     }
 
     .logo {
-      max-width: 120px; 
+      max-width: 120px;
       height: auto;
       opacity: 0.9; 
     }
-    h1, h2, h3, label, p, a, button, input{
-      font-family: 'Poppins', sans-serif;
-      }
-  
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: #ffcccc;
+
+    #header_1 {
+      text-align: center;
+      margin-bottom: 2rem;
     }
-    p {
-      font-size: 1.2rem;
-    }
-    a {
-      display: inline-block;
-      margin-top: 2rem;
-      padding: 10px 20px;
-      text-decoration: none;
-      border: 2px solid white;
-      border-radius: 10px;
+
+    #header_1 h1 {
       color: white;
-      transition: 0.3s;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
     }
-    a:hover {
+
+    .error-icon {
+      font-size: 4rem;
+      color: #ef4444;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 20px rgba(239, 68, 68, 0.5);
+    }
+
+    .error-message {
+      background: rgba(239, 68, 68, 0.2);
+      border: 2px solid #ef4444;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      color: #fecaca;
+      font-size: 1.1rem;
+      box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);
+    }
+
+    .info-section {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      backdrop-filter: blur(5px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      text-align: left;
+    }
+
+    .info-section h3 {
+      color: #60a5fa;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+
+    .info-section ul {
+      list-style: none;
+      padding: 0;
+      color: #d1d5db;
+    }
+
+    .info-section li {
+      padding: 0.5rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .buttons-section {
+      text-align: center;
+      margin-top: 2rem;
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    button, .btn {
+      padding: 12px 24px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 10px;
+      background: transparent;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      border: 3px solid #ffffff;
+      text-decoration: none;
+      display: inline-block;
+      min-width: 180px;
+      transition: all 0.3s ease;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    button:hover, .btn:hover {
       background: #ffffff;
       color: black;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
     }
+
+    .btn-secondary {
+      border-color: #6b7280;
+    }
+
+    .btn-secondary:hover {
+      background: #6b7280;
+      color: white;
+    }
+
+    h1, h2, h3, label, p, a, button, input {
+      font-family: 'Poppins', sans-serif;
+    }
+
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(15px); }
       to { opacity: 1; transform: translateY(0); }
+    }
+
+    .warning-note {
+      background: rgba(245, 158, 11, 0.2);
+      border-left: 4px solid #f59e0b;
+      padding: 1rem;
+      border-radius: 8px;
+      margin: 1rem 0;
+      color: #fbbf24;
     }
   </style>
 </head>
 <body>
   <main>
     <div class="container">
-      <header><img src="{{ url_for('static', filename='campuslands.png') }}" alt="Logo Empresa" class="logo">
+      <header>
+        <img src="{{ url_for('static', filename='campuslands.png') }}" alt="Logo Empresa" class="logo">
       </header>
-      <h2>⚠️ No hay certificados por generar</h2>
-      <a href="/">Volver</a>
+      
+      <div id="header_1">
+        <div class="error-icon">⚠️</div>
+        <h1>Sin Certificados por Generar</h1>
+      </div>
+
+      <div class="error-message">
+        <strong>No se encontraron registros que requieran certificados</strong>
+      </div>
+
+      <div class="buttons-section">
+        <a href="/" class="btn"> Intentar con Otro Archivo</a>
+      </div>
     </div>
   </main>
+  <script>
+    // Efecto de entrada suave
+    document.addEventListener('DOMContentLoaded', function() {
+      console.log('Página de error cargada - verificar archivo Excel');
+    });
+  </script>
 </body>
 </html>

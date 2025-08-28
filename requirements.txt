@@ -5,3 +5,8 @@ docxtpl
 pywin32
 docx2pdf
 pyinstaller
+lxml
+pillow
+jinja2
+python-pptx
+pywin32 comtypes
