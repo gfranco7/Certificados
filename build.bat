@@ -23,9 +23,9 @@ pyinstaller --onefile --noconsole ^
 
 :: Verifica si se creó el exe
 if exist dist\%APP_NAME%.exe (
-    echo [4/4] ✅ Compilación exitosa: dist\%APP_NAME%.exe
+    echo [4/4]  Compilación exitosa: dist\%APP_NAME%.exe
 ) else (
-    echo [4/4] ❌ Error: No se generó el ejecutable.
+    echo [4/4]  Error: No se generó el ejecutable.
 )
 
 pause

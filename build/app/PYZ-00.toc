@@ -1,5 +1,5 @@
 ('C:\\Users\\ia '
- 'academy\\Desktop\\GFJL\\AI_academy\\certificados_app\\Certificados\\build\\app\\PYZ-00.pyz',
+ 'academy\\Desktop\\GFJL\\AI_Academy\\certificados_app\\Certificados\\build\\app\\PYZ-00.pyz',
  [('__future__',
    'C:\\Users\\ia '
    'academy\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\__future__.py',
