@@ -56,7 +56,6 @@ def open_browser():
         logger.error(f"Error abriendo navegador: {e}")
 
 def get_downloads_folder():
-    """Obtener carpeta de descargas del usuario"""
     try:
         home = Path.home()
         downloads = home / "Downloads"
@@ -112,11 +111,14 @@ def procesar():
         excel_file = request.files['excel_file']
         if excel_file.filename == '':
             return "No se seleccionó archivo", 400
-        
+    
+        logger.info(f"Archivo Excel recibido: {excel_file.name}")
         # Leer Excel
         try:
             df = pd.read_excel(excel_file)
             logger.info(f"Excel leído correctamente. Filas: {len(df)}")
+            excel_filename = excel_file.filename
+            logger.info(f"Archivo Excel recibido: {excel_filename}")
         except Exception as e:
             logger.error(f"Error leyendo Excel: {e}")
             return f"Error leyendo archivo Excel: {str(e)}", 400
@@ -124,10 +126,11 @@ def procesar():
         # Validar columnas requeridas (buscar variaciones de nombres)
         required_mapping = {
             'nombre': ['nombre', 'Nombre', 'NOMBRE'],
-            'cedula': ['cedula', 'Cedula', 'CEDULA', 'cédula', 'Cédula'],
+            'cedula': ['cedula', 'Cedula', 'CÉDULA', 'cédula', 'Cédula', 'CEDULA'],
             'fecha': ['fecha', 'Fecha', 'FECHA'],
-            'compañia': ['compañia', 'Compañia', 'COMPAÑIA', 'compania', 'Compania', 'empresa', 'Empresa'],
-            'certificado': ['certificado', 'Certificado', 'CERTIFICADO']
+            'compañia': ['compañia', 'Compañia', 'COMPAÑÍA', 'compania', 'Compania', 'empresa', 'Empresa', 'COMPAÑIA'],
+            'certificado': ['certificado', 'Certificado', 'CERTIFICADO'],
+            'horas': ['horas', 'Horas', 'HORAS']
         }
         
         # Normalizar nombres de columnas
@@ -173,11 +176,29 @@ def procesar():
                     logger.info(f"Procesando certificado para: {row['nombre']}")
                     
                     # Preparar contexto
-                    contexto = {
+                    meses = {
+                        "01": "Enero", "02": "Febrero", "03": "Marzo",
+                        "04": "Abril", "05": "Mayo", "06": "Junio",
+                        "07": "Julio", "08": "Agosto", "09": "Septiembre",
+                        "10": "Octubre", "11": "Noviembre", "12": "Diciembre"
+                    }
+
+                    fecha = row["fecha"] if not pd.isna(row["fecha"]) else None
+                    if fecha:
+                        dia = fecha.strftime("%d")
+                        mes = meses[fecha.strftime("%m")]
+                        año = fecha.strftime("%Y")
+                    else:
+                        dia = mes = año = ""
+
+                    contexto = {    
                         "NOMBRE": str(row["nombre"]),
                         "CEDULA": str(row["cedula"]),
-                        "FECHA": row["fecha"].strftime("%d/%m/%Y") if not pd.isna(row["fecha"]) else "",
-                        "COMPANIA": str(row["compañia"])
+                        "DIA": dia,
+                        "MES": mes,
+                        "AÑO": año,
+                        "COMPANIA": str(row["compañia"]),
+                        "HORAS": str(row.get("horas", ""))
                     }
 
                     # Crear subcarpeta por compañía
@@ -227,9 +248,12 @@ def procesar():
                 logger.error(f"Error procesando fila {index}: {e}")
                 continue
 
-        # Guardar Excel actualizado
+        # Se guarda el Excel actualizado
+
+# Guardar Excel actualizado en carpeta Certificados con el mismo nombre del archivo subido
         try:
-            excel_actualizado = output_dir / "datos_actualizados.xlsx"
+            original_name = Path(excel_file.filename).name  # nombre original del archivo
+            excel_actualizado = output_dir / original_name  # lo guardamos con el mismo nombre
             df.to_excel(excel_actualizado, index=False)
             logger.info(f"Excel actualizado guardado: {excel_actualizado}")
         except Exception as e:
@@ -241,8 +265,6 @@ def procesar():
                 pythoncom.CoUninitialize()
             except:
                 pass
-
-        # Abrir carpeta de resultados
         try:
             if ON_WINDOWS:
                 os.startfile(str(output_dir))
