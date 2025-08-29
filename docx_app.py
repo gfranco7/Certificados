@@ -200,7 +200,7 @@ def procesar():
                     # Actualizar DataFrame
                     df.at[index, "certificado"] = "si"
 
-                    # Conversión a PDF
+                    # Conversión a PDF 
                     if ON_WINDOWS:
                         try:
                             convert(str(docx_file), str(pdf_file))

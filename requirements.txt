@@ -10,3 +10,7 @@ pillow
 jinja2
 python-pptx
 pywin32 comtypes
+reportlab pywin32
+reportlab pillow pywin32
+
+--upgrade reportlab pillow pywin32

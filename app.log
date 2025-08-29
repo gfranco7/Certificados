@@ -1,3 +1,43 @@
-2025-08-28 16:44:00,789 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+2025-08-29 09:10:34,821 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on http://127.0.0.1:5000
-2025-08-28 16:44:00,790 - INFO - [33mPress CTRL+C to quit[0m
+2025-08-29 09:10:34,821 - INFO - [33mPress CTRL+C to quit[0m
+2025-08-29 09:10:37,007 - INFO - 127.0.0.1 - - [29/Aug/2025 09:10:37] "GET / HTTP/1.1" 200 -
+2025-08-29 09:10:37,063 - INFO - 127.0.0.1 - - [29/Aug/2025 09:10:37] "[36mGET /static/campuslands.png HTTP/1.1[0m" 304 -
+2025-08-29 09:10:51,609 - INFO - Excel leído correctamente. Filas: 7
+2025-08-29 09:10:51,611 - INFO - 127.0.0.1 - - [29/Aug/2025 09:10:51] "POST /procesar HTTP/1.1" 200 -
+2025-08-29 09:10:51,623 - INFO - 127.0.0.1 - - [29/Aug/2025 09:10:51] "[36mGET /static/campuslands.png HTTP/1.1[0m" 304 -
+2025-08-29 09:10:53,159 - INFO - 127.0.0.1 - - [29/Aug/2025 09:10:53] "GET / HTTP/1.1" 200 -
+2025-08-29 09:10:53,170 - INFO - 127.0.0.1 - - [29/Aug/2025 09:10:53] "[36mGET /static/campuslands.png HTTP/1.1[0m" 304 -
+2025-08-29 09:11:14,094 - INFO - Excel leído correctamente. Filas: 7
+2025-08-29 09:11:14,095 - INFO - Plantilla PPTX encontrada en: C:\Users\ia academy\Desktop\GFJL\AI_Academy\certificados_app\Certificados\plantilla.pptx
+2025-08-29 09:11:14,096 - INFO - Procesando certificado para Gean Franco
+2025-08-29 09:11:14,096 - INFO - Renderizando PPTX: C:\Users\ia academy\Desktop\GFJL\AI_Academy\certificados_app\Certificados\plantilla.pptx -> C:\Users\ia academy\Downloads\Certificados\Ferrari\certificado_8h_Gean_Franco.pptx
+2025-08-29 09:11:14,127 - INFO - PPTX creado exitosamente: C:\Users\ia academy\Downloads\Certificados\Ferrari\certificado_8h_Gean_Franco.pptx
+2025-08-29 09:11:14,127 - INFO - Iniciando conversión a PDF para: Gean Franco
+2025-08-29 09:11:14,127 - INFO - === CONVERSIÓN DEFINITIVA ===
+2025-08-29 09:11:14,127 - INFO - PPTX: C:\Users\ia academy\Downloads\Certificados\Ferrari\certificado_8h_Gean_Franco.pptx
+2025-08-29 09:11:14,127 - INFO - PDF: C:\Users\ia academy\Downloads\Certificados\Ferrari\certificado_8h_Gean_Franco.pdf
+2025-08-29 09:11:14,127 - INFO - \U0001f504 Método 1: PowerPoint COM mejorado
+2025-08-29 09:11:14,146 - INFO - Iniciando conversión con PowerPoint: C:\Users\ia academy\Downloads\Certificados\Ferrari\certificado_8h_Gean_Franco.pptx -> C:\Users\ia academy\Downloads\Certificados\Ferrari\certificado_8h_Gean_Franco.pdf
+2025-08-29 09:11:14,168 - INFO - Abriendo presentación: C:\Users\ia academy\Downloads\Certificados\Ferrari\certificado_8h_Gean_Franco.pptx
+2025-08-29 09:11:14,267 - INFO - Exportando a PDF: C:\Users\ia academy\Downloads\Certificados\Ferrari\certificado_8h_Gean_Franco.pdf
+2025-08-29 09:11:14,278 - ERROR - Error en conversión PowerPoint: ExportAsFixedFormat() got an unexpected keyword argument 'IncludeDocProps'. Did you mean 'IncludeDocProperties'?
+2025-08-29 09:11:17,093 - WARNING - \u274c PowerPoint COM falló
+2025-08-29 09:11:17,093 - INFO - \U0001f504 Método 2: PowerPoint con preview
+2025-08-29 09:11:17,144 - INFO - Conversión con preview: C:\Users\ia academy\Downloads\Certificados\Ferrari\certificado_8h_Gean_Franco.pptx -> C:\Users\ia academy\Downloads\Certificados\Ferrari\certificado_8h_Gean_Franco.pdf
+2025-08-29 09:11:17,145 - ERROR - Error en conversión con preview: (-2147221008, 'No se ha llamado a CoInitialize.', None, None)
+2025-08-29 09:11:17,146 - WARNING - \u274c PowerPoint preview falló
+2025-08-29 09:11:17,146 - INFO - \U0001f504 Método 3: LibreOffice
+2025-08-29 09:11:17,147 - ERROR - LibreOffice no encontrado
+2025-08-29 09:11:17,147 - WARNING - \u274c LibreOffice falló
+2025-08-29 09:11:17,147 - INFO - \U0001f504 Método 4: Python avanzado
+2025-08-29 09:11:17,147 - INFO - Conversión avanzada Python: C:\Users\ia academy\Downloads\Certificados\Ferrari\certificado_8h_Gean_Franco.pptx -> C:\Users\ia academy\Downloads\Certificados\Ferrari\certificado_8h_Gean_Franco.pdf
+2025-08-29 09:11:17,153 - INFO - Procesando slide 1
+2025-08-29 09:11:17,161 - INFO - PDF avanzado generado: C:\Users\ia academy\Downloads\Certificados\Ferrari\certificado_8h_Gean_Franco.pdf (2314 bytes)
+2025-08-29 09:11:17,161 - INFO - \u2705 Python avanzado exitoso
+2025-08-29 09:11:17,161 - ERROR - PDF creado pero parece inválido: C:\Users\ia academy\Downloads\Certificados\Ferrari\certificado_8h_Gean_Franco.pdf
+2025-08-29 09:11:17,161 - ERROR - Tamaño: 2314 bytes
+2025-08-29 09:11:17,227 - INFO - Excel actualizado guardado: C:\Users\ia academy\Downloads\Certificados\datos_actualizados.xlsx
+2025-08-29 09:11:17,227 - INFO - Procesamiento completado. Certificados creados: 1
+2025-08-29 09:11:17,229 - INFO - 127.0.0.1 - - [29/Aug/2025 09:11:17] "POST /procesar HTTP/1.1" 200 -
+2025-08-29 09:11:17,238 - INFO - 127.0.0.1 - - [29/Aug/2025 09:11:17] "[36mGET /static/campuslands.png HTTP/1.1[0m" 304 -
