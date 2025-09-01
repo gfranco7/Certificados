@@ -211,7 +211,7 @@ def procesar():
 
                     # Generar nombres de archivo
                     plantilla_name = str(row.get("horas", "general"))
-                    nombre_base = f"certificado_0_{plantilla_name}_horas_{row['nombre'].replace(' ', '_')}"
+                    nombre_base = f"certificado_0{plantilla_name}_horas_{row['nombre'].replace(' ', '_')}"
                     nombre_base = "".join(c for c in nombre_base if c.isalnum() or c in (' ', '-', '_')).rstrip()
                     
                     docx_file = compania_folder / f"{nombre_base}.docx"

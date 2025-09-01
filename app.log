@@ -2,21 +2,14 @@ INFO:__main__:Iniciando procesamiento...
 INFO:__main__:Archivo Excel recibido: excel_file
 INFO:__main__:Excel leído correctamente. Filas: 16
 INFO:__main__:Archivo Excel recibido: empleados.xlsx
-INFO:__main__:Plantilla encontrada en: C:\Users\ia academy\Desktop\GFJL\AI_Academy\certificados_app\Certificados\plantilla_final.docx
-INFO:__main__:Carpeta de salida: C:\Users\ia academy\Downloads\Certificados
-INFO:__main__:Procesando certificado para: MARIA TERESA CORTES NARVAEZ
-  0%|                                                                                        | 0/1 [00:00<?, ?it/s]100%|################################################################################| 1/1 [00:01<00:00,  1.47s/it]100%|################################################################################| 1/1 [00:03<00:00,  3.87s/it]
-INFO:__main__:Certificado PDF creado: C:\Users\ia academy\Downloads\Certificados\Cajasan\certificado_4_horas_MARIA_TERESA_CORTES_NARVAEZ.pdf
-INFO:__main__:Excel actualizado guardado: C:\Users\ia academy\Downloads\Certificados\empleados.xlsx
-INFO:__main__:Procesamiento completado. Certificados creados: 1
 INFO:__main__:Iniciando procesamiento...
 INFO:__main__:Archivo Excel recibido: excel_file
 INFO:__main__:Excel leído correctamente. Filas: 16
 INFO:__main__:Archivo Excel recibido: empleados.xlsx
 INFO:__main__:Plantilla encontrada en: C:\Users\ia academy\Desktop\GFJL\AI_Academy\certificados_app\Certificados\plantilla_final.docx
 INFO:__main__:Carpeta de salida: C:\Users\ia academy\Downloads\Certificados
-INFO:__main__:Procesando certificado para: MARIA TERESA CORTES NARVAEZ
-  0%|                                                                                        | 0/1 [00:00<?, ?it/s]100%|################################################################################| 1/1 [00:01<00:00,  1.51s/it]100%|################################################################################| 1/1 [00:02<00:00,  2.82s/it]
-INFO:__main__:Certificado PDF creado: C:\Users\ia academy\Downloads\Certificados\Cajasan\certificado_4_horas_MARIA_TERESA_CORTES_NARVAEZ.pdf
+INFO:__main__:Procesando certificado para: NORBERTO JIMENEZ PRADA
+  0%|                                                                                        | 0/1 [00:00<?, ?it/s]100%|################################################################################| 1/1 [00:01<00:00,  1.49s/it]100%|################################################################################| 1/1 [00:03<00:00,  3.87s/it]
+INFO:__main__:Certificado PDF creado: C:\Users\ia academy\Downloads\Certificados\Cajasan\certificado_0_4_horas_NORBERTO_JIMENEZ_PRADA.pdf
 INFO:__main__:Excel actualizado guardado: C:\Users\ia academy\Downloads\Certificados\empleados.xlsx
 INFO:__main__:Procesamiento completado. Certificados creados: 1
