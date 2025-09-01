@@ -71,7 +71,7 @@ def get_downloads_folder():
 def get_plantilla_path():
     """Buscar plantilla.docx en diferentes ubicaciones"""
     possible_paths = [
-        resource_path("plantilla.docx"),  # Empaquetada con exe
+        resource_path("plantilla_final.docx"),  # Empaquetada con exe
         "plantilla.docx",  # Directorio actual
         Path.cwd() / "plantilla.docx",  # Directorio de trabajo
         get_downloads_folder() / "certificados" / "plantilla.docx"  # En carpeta certificados
@@ -124,12 +124,14 @@ def procesar():
             return f"Error leyendo archivo Excel: {str(e)}", 400
 
         required_mapping = {
+            'item': ['item', 'Item', 'ITEM'],
             'nombre': ['nombre', 'Nombre', 'NOMBRE'],
             'cedula': ['cedula', 'Cedula', 'CÉDULA', 'cédula', 'Cédula', 'CEDULA'],
             'fecha': ['fecha', 'Fecha', 'FECHA'],
             'compañia': ['compañia', 'Compañia', 'COMPAÑÍA', 'compania', 'Compania', 'empresa', 'Empresa', 'COMPAÑIA'],
             'certificado': ['certificado', 'Certificado', 'CERTIFICADO'],
-            'horas': ['horas', 'Horas', 'HORAS']
+            'horas': ['horas', 'Horas', 'HORAS'],
+            'id_formacion': ['id_formacion', 'Id_Formacion', 'ID_FORMACION', 'id formación', 'Id Formación', 'ID FORMACIÓN']
         }
         
         # Normalizar nombres de columnas
@@ -190,14 +192,17 @@ def procesar():
                     else:
                         dia = mes = año = ""
 
-                    contexto = {    
+                    contexto = {
+                        "ITEM": str(row["item"]),    
                         "NOMBRE": str(row["nombre"]),
                         "CEDULA": str(row["cedula"]),
                         "DIA": dia,
                         "MES": mes,
                         "AÑO": año,
                         "COMPANIA": str(row["compañia"]),
-                        "HORAS": str(row.get("horas", ""))
+                        "HORAS": str(row.get("horas", "")),
+                        "ID_FORMACION": str(row["id_formacion"])
+                        
                     }
 
                     # Crear subcarpeta por compañía
@@ -205,8 +210,8 @@ def procesar():
                     os.makedirs(compania_folder, exist_ok=True)
 
                     # Generar nombres de archivo
-                    plantilla_name = str(row.get("plantilla", "general"))
-                    nombre_base = f"certificado_{plantilla_name}_{row['nombre'].replace(' ', '_')}"
+                    plantilla_name = str(row.get("horas", "general"))
+                    nombre_base = f"certificado_{plantilla_name}_horas_{row['nombre'].replace(' ', '_')}"
                     nombre_base = "".join(c for c in nombre_base if c.isalnum() or c in (' ', '-', '_')).rstrip()
                     
                     docx_file = compania_folder / f"{nombre_base}.docx"

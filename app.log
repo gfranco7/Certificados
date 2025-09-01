@@ -2,54 +2,10 @@ INFO:__main__:Iniciando procesamiento...
 INFO:__main__:Archivo Excel recibido: excel_file
 INFO:__main__:Excel leído correctamente. Filas: 16
 INFO:__main__:Archivo Excel recibido: empleados.xlsx
-INFO:__main__:Plantilla encontrada en: C:\Users\ia academy\Desktop\GFJL\AI_Academy\certificados_app\Certificados\plantilla.docx
+INFO:__main__:Plantilla encontrada en: C:\Users\ia academy\Desktop\GFJL\AI_Academy\certificados_app\Certificados\plantilla_final.docx
 INFO:__main__:Carpeta de salida: C:\Users\ia academy\Downloads\Certificados
-INFO:__main__:Procesando certificado para: ALEXANDER ARANDA VALLEJO
-  0%|                                                                                            | 0/1 [00:00<?, ?it/s]100%|####################################################################################| 1/1 [00:01<00:00,  1.60s/it]100%|####################################################################################| 1/1 [00:03<00:00,  3.98s/it]
-INFO:__main__:Certificado PDF creado: C:\Users\ia academy\Downloads\Certificados\Campus\certificado_general_ALEXANDER_ARANDA_VALLEJO.pdf
-INFO:__main__:Procesando certificado para: NORBERTO JIMENEZ PRADA
-  0%|                                                                                            | 0/1 [00:00<?, ?it/s]100%|####################################################################################| 1/1 [00:01<00:00,  1.57s/it]100%|####################################################################################| 1/1 [00:03<00:00,  3.99s/it]
-INFO:__main__:Certificado PDF creado: C:\Users\ia academy\Downloads\Certificados\Cajasan\certificado_general_NORBERTO_JIMENEZ_PRADA.pdf
 INFO:__main__:Procesando certificado para: MARIA TERESA CORTES NARVAEZ
-  0%|                                                                                            | 0/1 [00:00<?, ?it/s]100%|####################################################################################| 1/1 [00:01<00:00,  1.58s/it]100%|####################################################################################| 1/1 [00:04<00:00,  4.10s/it]
-INFO:__main__:Certificado PDF creado: C:\Users\ia academy\Downloads\Certificados\Cajasan\certificado_general_MARIA_TERESA_CORTES_NARVAEZ.pdf
-ERROR:__main__:Error guardando Excel: [Errno 13] Permission denied: 'C:\\Users\\ia academy\\Downloads\\Certificados\\empleados.xlsx'
-INFO:__main__:Procesamiento completado. Certificados creados: 3
-INFO:__main__:Iniciando procesamiento...
-INFO:__main__:Archivo Excel recibido: excel_file
-INFO:__main__:Excel leído correctamente. Filas: 16
-INFO:__main__:Archivo Excel recibido: empleados.xlsx
-INFO:__main__:Plantilla encontrada en: C:\Users\ia academy\Desktop\GFJL\AI_Academy\certificados_app\Certificados\plantilla.docx
-INFO:__main__:Carpeta de salida: C:\Users\ia academy\Downloads\Certificados
-INFO:__main__:Procesando certificado para: ALEXANDER ARANDA VALLEJO
-  0%|                                                                                            | 0/1 [00:00<?, ?it/s]100%|####################################################################################| 1/1 [00:01<00:00,  1.57s/it]100%|####################################################################################| 1/1 [00:03<00:00,  3.94s/it]
-INFO:__main__:Certificado PDF creado: C:\Users\ia academy\Downloads\Certificados\Campus\certificado_general_ALEXANDER_ARANDA_VALLEJO.pdf
-INFO:__main__:Procesando certificado para: NORBERTO JIMENEZ PRADA
-  0%|                                                                                            | 0/1 [00:00<?, ?it/s]100%|####################################################################################| 1/1 [00:01<00:00,  1.53s/it]100%|####################################################################################| 1/1 [00:03<00:00,  3.92s/it]
-INFO:__main__:Certificado PDF creado: C:\Users\ia academy\Downloads\Certificados\Cajasan\certificado_general_NORBERTO_JIMENEZ_PRADA.pdf
-INFO:__main__:Procesando certificado para: MARIA TERESA CORTES NARVAEZ
-  0%|                                                                                            | 0/1 [00:00<?, ?it/s]100%|####################################################################################| 1/1 [00:01<00:00,  1.53s/it]100%|####################################################################################| 1/1 [00:03<00:00,  3.90s/it]
-INFO:__main__:Certificado PDF creado: C:\Users\ia academy\Downloads\Certificados\Cajasan\certificado_general_MARIA_TERESA_CORTES_NARVAEZ.pdf
-ERROR:__main__:Error guardando Excel: [Errno 13] Permission denied: 'C:\\Users\\ia academy\\Downloads\\Certificados\\empleados.xlsx'
-INFO:__main__:Procesamiento completado. Certificados creados: 3
-INFO:__main__:Iniciando procesamiento...
-INFO:__main__:Archivo Excel recibido: excel_file
-INFO:__main__:Excel leído correctamente. Filas: 16
-INFO:__main__:Archivo Excel recibido: empleados.xlsx
-INFO:__main__:Plantilla encontrada en: C:\Users\ia academy\Desktop\GFJL\AI_Academy\certificados_app\Certificados\plantilla.docx
-INFO:__main__:Carpeta de salida: C:\Users\ia academy\Downloads\Certificados
-INFO:__main__:Procesando certificado para: ALEXANDER ARANDA VALLEJO
-  0%|                                                                                            | 0/1 [00:00<?, ?it/s]100%|####################################################################################| 1/1 [00:01<00:00,  1.59s/it]100%|####################################################################################| 1/1 [00:03<00:00,  3.99s/it]
-INFO:__main__:Certificado PDF creado: C:\Users\ia academy\Downloads\Certificados\Campus\certificado_general_ALEXANDER_ARANDA_VALLEJO.pdf
-INFO:__main__:Procesando certificado para: NORBERTO JIMENEZ PRADA
-  0%|                                                                                            | 0/1 [00:00<?, ?it/s]100%|####################################################################################| 1/1 [00:01<00:00,  1.56s/it]100%|####################################################################################| 1/1 [00:03<00:00,  3.97s/it]
-INFO:__main__:Certificado PDF creado: C:\Users\ia academy\Downloads\Certificados\Cajasan\certificado_general_NORBERTO_JIMENEZ_PRADA.pdf
-INFO:__main__:Procesando certificado para: MARIA TERESA CORTES NARVAEZ
-  0%|                                                                                            | 0/1 [00:00<?, ?it/s]100%|####################################################################################| 1/1 [00:01<00:00,  1.56s/it]100%|####################################################################################| 1/1 [00:03<00:00,  3.94s/it]
-INFO:__main__:Certificado PDF creado: C:\Users\ia academy\Downloads\Certificados\Cajasan\certificado_general_MARIA_TERESA_CORTES_NARVAEZ.pdf
+  0%|                                                                                        | 0/1 [00:00<?, ?it/s]100%|################################################################################| 1/1 [00:01<00:00,  1.49s/it]100%|################################################################################| 1/1 [00:03<00:00,  3.89s/it]
+INFO:__main__:Certificado PDF creado: C:\Users\ia academy\Downloads\Certificados\Cajasan\certificado_4_horas_MARIA_TERESA_CORTES_NARVAEZ.pdf
 INFO:__main__:Excel actualizado guardado: C:\Users\ia academy\Downloads\Certificados\empleados.xlsx
-INFO:__main__:Procesamiento completado. Certificados creados: 3
-INFO:__main__:Iniciando procesamiento...
-INFO:__main__:Archivo Excel recibido: excel_file
-INFO:__main__:Excel leído correctamente. Filas: 16
-INFO:__main__:Archivo Excel recibido: empleados.xlsx
+INFO:__main__:Procesamiento completado. Certificados creados: 1
