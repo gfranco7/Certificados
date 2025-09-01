@@ -201,7 +201,7 @@ def procesar():
                         "AÑO": año,
                         "COMPANIA": str(row["compañia"]),
                         "HORAS": str(row.get("horas", "")),
-                        "ID_FORMACION": str(row["id_formacion"])
+                        "ID_FORM": str(row["id_formacion"])
                         
                     }
 
@@ -211,7 +211,7 @@ def procesar():
 
                     # Generar nombres de archivo
                     plantilla_name = str(row.get("horas", "general"))
-                    nombre_base = f"certificado_{plantilla_name}_horas_{row['nombre'].replace(' ', '_')}"
+                    nombre_base = f"certificado_0_{plantilla_name}_horas_{row['nombre'].replace(' ', '_')}"
                     nombre_base = "".join(c for c in nombre_base if c.isalnum() or c in (' ', '-', '_')).rstrip()
                     
                     docx_file = compania_folder / f"{nombre_base}.docx"
