@@ -192,8 +192,17 @@ def procesar():
                     else:
                         dia = mes = año = ""
 
-                    contexto = {
-                        "ITEM": str(row["item"]),    
+                    id_form = row.get("id_formacion", "")
+                    item = row.get("item", "")
+
+                    certificado_code = ""
+                    if pd.notna(id_form) and id_form != "" and pd.notna(item) and item != "":
+                        try:
+                            certificado_code = f"{int(id_form):04d}-{int(item):04d}"
+                        except Exception:
+                            certificado_code = f"{id_form}-{item}"
+
+                    contexto = { 
                         "NOMBRE": str(row["nombre"]),
                         "CEDULA": str(row["cedula"]),
                         "DIA": dia,
@@ -201,7 +210,8 @@ def procesar():
                         "AÑO": año,
                         "COMPANIA": str(row["compañia"]),
                         "HORAS": str(row.get("horas", "")),
-                        "ID_FORM": str(row["id_formacion"])
+                        
+                        "CERTIFICADO": certificado_code
                         
                     }
 
@@ -222,6 +232,7 @@ def procesar():
                     plantilla.render(contexto)
                     plantilla.save(str(docx_file))
                     
+                    
                     # Actualizar DataFrame
                     df.at[index, "certificado"] = "si"
 
@@ -237,7 +248,7 @@ def procesar():
                     else:
                         # LibreOffice (Linux/Mac)
                         try:
-                            subprocess.run([    
+                            subprocess.run([        
                                 "soffice", "--headless", "--convert-to", "pdf", 
                                 "--outdir", str(compania_folder), str(docx_file)
                             ], check=True)
